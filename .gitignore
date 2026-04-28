@@ -1,0 +1,29 @@
+# 의존성
+node_modules/
+
+# Next.js 빌드 산출물
+.next/
+out/
+
+# Electron 빌드 산출물
+dist/
+
+# 타입스크립트 빌드 캐시
+tsconfig.tsbuildinfo
+
+# 환경 변수
+.env
+.env.local
+.env.*.local
+
+# 에디터 설정
+.vscode/
+.idea/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# Claude Code 설정 (개발 도구, 공개 불필요)
+.claude/
+CLAUDE.md

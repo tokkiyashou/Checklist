@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 242 242 247;    /* iOS system background #F2F2F7 */
+  --foreground: 0 0 0;
+  --card: 255 255 255;
+  --card-done: 242 242 247;
+  --toss-blue: 0 100 255;
+}
+
+.dark {
+  --background: 0 0 0;
+  --foreground: 255 255 255;
+  --card: 28 28 30;             /* iOS dark card #1C1C1E */
+  --card-done: 44 44 46;        /* slightly lighter for done cards */
+  --toss-blue: 10 132 255;      /* iOS blue dark */
+}
+
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: -apple-system, 'Pretendard', 'Apple SD Gothic Neo', BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: background-color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Numeric tabular */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
