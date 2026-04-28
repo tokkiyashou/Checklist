@@ -440,6 +440,7 @@ export default function CalendarPage() {
   }, [checklists, selectedDate])
 
   function handleLongPress(date: string) {
+    if (date < localDateStr()) return
     setCreateModal({ date, step: 'select', kind: 'checklist', title: '' })
   }
 
